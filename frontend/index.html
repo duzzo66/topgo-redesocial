@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Um cantinho só nosso" />
+    <title>Entre Nós</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell" id="appShell">
+      <div class="mobile-topbar"><button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false">☰</button><span>entre nós</span></div>
+      <div class="menu-overlay" id="menuOverlay"></div>
+      <aside class="sidebar">
+        <div class="brand"><span class="brand-mark">♥</span><span>entre nós</span></div>
+        <nav class="main-nav" aria-label="Navegação principal">
+          <a class="nav-item active" href="#inicio"><span>⌂</span> Início</a>
+          <a class="nav-item" href="#memorias"><span>♡</span> Memórias</a>
+          <a class="nav-item" href="#mensagens"><span>✉</span> Mensagens</a>
+          <a class="nav-item" href="#perfil"><span>◉</span> Nosso perfil</a>
+        </nav>
+        <button class="new-post-button" id="focusComposer">+ Nova publicação</button>
+        <div class="sidebar-profile">
+          <div class="avatar avatar-couple">A<span>♡</span>L</div>
+          <div><strong>Alana & Lucas</strong><small>@entrenos</small></div>
+          <span class="more">•••</span>
+        </div>
+      </aside>
+
+      <main class="feed" id="inicio">
+        <header class="feed-header"><div><h1>Início</h1><p>Nosso cantinho no mundo</p></div><button class="icon-button" id="settingsButton" aria-label="Configurações">⚙</button></header>
+        <section class="composer" id="composer">
+          <div class="avatar avatar-user">L</div>
+          <div class="composer-content"><textarea id="postText" maxlength="280" placeholder="O que está no seu coração?" rows="2"></textarea><div class="composer-footer"><span id="charCount">0 / 280</span><button id="publishButton">Publicar</button></div></div>
+        </section>
+        <div class="filter-bar"><button class="filter active">Para nós</button><button class="filter">Mais recentes</button></div>
+        <section id="posts" aria-live="polite">
+        </section>
+      </main>
+
+      <aside class="right-panel"><div class="love-card"><span class="sparkle">✦</span><h2>Nosso tempo</h2><p>Vivendo uma história bonita, um dia de cada vez.</p><div class="time-grid"><div><strong>2</strong><small>anos</small></div><div><strong>8</strong><small>meses</small></div><div><strong>14</strong><small>dias</small></div></div><button>Ver nossa linha do tempo →</button></div><div class="suggestions"><h3>Momentos para guardar</h3><p>✨ Nossa primeira viagem</p><p>🍝 Aquele jantar especial</p><p>🌙 Conversas até tarde</p></div></aside>
+    </div>
+    <div class="settings-overlay is-hidden" id="settingsOverlay">
+      <section class="settings-card" role="dialog" aria-modal="true" aria-labelledby="settingsTitle">
+        <button class="settings-close" id="settingsClose" aria-label="Fechar">×</button>
+        <h2 id="settingsTitle">Configurações da conta</h2><p class="settings-subtitle">Personalize o seu perfil.</p>
+        <div class="banner-preview" id="bannerPreview"><span>Seu banner</span></div>
+        <label class="upload-label" for="bannerInput">Adicionar banner</label><input class="file-input" id="bannerInput" type="file" accept="image/*" />
+        <div class="settings-avatar-row"><div class="avatar avatar-user profile-preview" id="profilePreview">L</div><label class="upload-label" for="photoInput">Trocar foto</label><input class="file-input" id="photoInput" type="file" accept="image/*" /></div>
+        <label for="nameInput">Nome</label><input class="settings-input" id="nameInput" type="text" maxlength="40" />
+        <label for="bioInput">Bio</label><textarea class="settings-input" id="bioInput" maxlength="160" rows="3" placeholder="Escreva uma bio..."></textarea>
+        <button class="save-settings" id="saveSettings">Salvar alterações</button>
+      </section>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
