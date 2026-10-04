@@ -1,6 +1,6 @@
 # Backend
 
-Ponto de partida para a API do projeto **Entre Nós**.
+Ponto de partida para a API do projeto **togo**.
 
 Sugestão de próximos módulos:
 
